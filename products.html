@@ -91,7 +91,7 @@
       let productToDelete;
 
       // Mahsulotlarni backenddan olish
-      fetch("http://192.168.1.10:5000/products")
+      fetch("https://skaner-backend.onrender.com/products")
         .then((response) => response.json())
         .then((data) => {
           const productsContainer = document.getElementById("products-container");
@@ -138,7 +138,7 @@
 
       // O'chirishni tasdiqlash
       document.getElementById('confirm-delete').onclick = function() {
-        fetch(`http://192.168.1.10:5000/delete/${productToDelete}`, {
+        fetch(`https://skaner-backend.onrender.com/delete/${productToDelete}`, {
           method: 'DELETE',
         })
         .then(response => {
